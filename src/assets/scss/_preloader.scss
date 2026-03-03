@@ -1,0 +1,19 @@
+// In your _preloader.scss, ensure this section exists:
+.preloader {
+  // ... existing styles
+
+  &.loaded {
+    .animation-preloader {
+      opacity: 0;
+      transition: 0.3s ease-out;
+      visibility: hidden;
+    }
+
+    .loader-section {
+      .bg {
+        width: 0;
+        transition: 0.7s 0.3s cubic-bezier(0.1, 0.1, 0.1, 1);
+      }
+    }
+  }
+}

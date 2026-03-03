@@ -1,0 +1,269 @@
+// Update the service-section for proper 50/50 layout
+.service-section {
+  position: relative;
+  z-index: 9;
+  border-radius: 20px;
+  margin: 0 15px;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    z-index: 3;
+
+    .row {
+      min-height: 600px; // Adjust based on your needs
+    }
+  }
+
+  .service-image {
+    max-width: 50%; // Changed to 50% for 50/50 layout
+    width: 50%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    @include breakpoint (max-xl4){
+      max-width: 45%;
+    }
+
+    @include breakpoint (max-xxl){
+      max-width: 45%;
+    }
+
+    @include breakpoint (max-xl){
+      max-width: 45%;
+    }
+
+    @include breakpoint (max-lg){
+      position: static;
+      max-width: 100%;
+      width: 100%;
+      height: 500px;
+      margin: 30px 20px 0;
+      border-radius: 20px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 20px 0 0 20px;
+      height: 100%;
+      object-fit: cover;
+
+      @include breakpoint (max-lg){
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+// Update service content styles for left column
+.service-content-style-1 {
+  max-width: 90%;
+
+  @include breakpoint (max-lg){
+    max-width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .theme-btn {
+    margin-top: 30px;
+  }
+}
+
+// Update service box styles for right column - 50% width
+.service-box-style-1 {
+  max-width: 100%;
+  margin-left: 0; // Remove left margin
+  position: relative;
+  z-index: 10;
+
+  // Glass morphism effect for overlay
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+  @include breakpoint (max-lg){
+    margin-left: 0;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    margin-top: 30px;
+  }
+
+  li {
+    @include flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 12px;
+    background: $white;
+    padding: 20px 30px; // Slightly reduced padding
+    z-index: 9;
+    @include transition;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+    @include breakpoint (max-xl){
+      padding: 15px 25px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      content: "";
+      width: 0;
+      height: 100%;
+      border-radius: 12px;
+      background: #091613;
+      opacity: 0;
+      visibility: hidden;
+      @include transition;
+      z-index: -1;
+    }
+
+    .first-text {
+      @include flex;
+      gap: 15px;
+      @include transition;
+
+      .icon {
+        svg {
+          @include transition;
+          display: inline-block;
+          width: 50px; // Slightly smaller icons
+          height: 50px;
+
+          @include breakpoint (max-xl){
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+
+      h3 {
+        font-size: 20px; // Adjust font size
+
+        @include breakpoint (max-xl){
+          font-size: 18px;
+        }
+
+        a {
+          background-position: 0 95%;
+          background-repeat: no-repeat;
+          background-size: 0% 2px;
+          display: inline;
+
+          &:hover {
+            color: $white;
+            background-size: 100% 2px;
+            background-image: linear-gradient(180deg, $white 0%, $white 100%);
+          }
+        }
+      }
+    }
+
+    .arrow-icon {
+      color: $theme-color;
+      font-size: 30px; // Slightly smaller
+      opacity: 0;
+      visibility: hidden;
+      @include transition;
+
+      i {
+        transform: rotate(-45deg);
+        @include transition;
+      }
+
+      &:hover {
+        i {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+        width: 100%;
+      }
+
+      .first-text {
+        .icon {
+          svg {
+            transform: scaleX(-1) !important;
+          }
+
+          svg path {
+            fill: $theme-color;
+          }
+        }
+
+        h3 {
+          a {
+            color: $white;
+          }
+        }
+      }
+
+      .arrow-icon {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+// Optional: Add gradient overlay on image for better contrast
+.service-section {
+  .service-image {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 70%);
+      border-radius: 20px 0 0 20px;
+      pointer-events: none;
+
+      @include breakpoint (max-lg){
+        display: none;
+      }
+    }
+  }
+}
+
+// Ensure proper alignment on tablets
+@include breakpoint (max-lg){
+  .service-section {
+    .container {
+      .row {
+        min-height: auto;
+      }
+    }
+  }
+
+  .service-content-style-1 {
+    text-align: center;
+
+    .theme-btn {
+      margin: 30px auto 0;
+      display: inline-block;
+    }
+  }
+}

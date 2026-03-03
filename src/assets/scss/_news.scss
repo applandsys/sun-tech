@@ -1,0 +1,218 @@
+.news-section {
+  background-color: #fff;
+  padding: 80px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.news-section .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-title .sub-title {
+  color: #0066B3;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title .sub-title img {
+  width: auto;
+  height: auto;
+}
+
+.section-title h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0A1E2C;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Row styles - CRITICAL for 3-column layout */
+.news-section .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-right: -12px !important;
+  margin-left: -12px !important;
+  box-sizing: border-box;
+}
+
+.news-section .row.g-4 {
+  gap: 0 !important;
+}
+
+/* Column styles - Ensures 3 cards in a row */
+.news-section .col-xl-4 {
+  flex: 0 0 33.333333% !important;
+  max-width: 33.333333% !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Tablet view - 2 cards per row */
+@media (max-width: 1199px) {
+  .news-section .col-xl-4 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+/* Mobile view - 1 card per row */
+@media (max-width: 767px) {
+  .news-section .col-xl-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+.news-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 102, 179, 0.1);
+}
+
+.news-card:hover .news-card-image img {
+  transform: scale(1.05);
+}
+
+.news-card-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  width: 100%;
+}
+
+.news-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.news-card-image .date-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #FFC107;
+  color: #0A1E2C;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.news-card-image .date-badge i {
+  font-size: 14px;
+}
+
+.news-card-content {
+  padding: 25px 20px 30px;
+  flex: 1;
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.news-meta .author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5C6A7A;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.news-meta .author i {
+  font-size: 18px;
+  color: #5C6A7A;
+}
+
+.news-meta .category {
+  background: rgba(0, 102, 179, 0.08);
+  color: #0066B3;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.news-title {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.news-title a {
+  color: #0A1E2C;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline;
+}
+
+.news-title a:hover {
+  color: #0066B3;
+}
+
+.news-description {
+  color: #5C6A7A;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Desktop specific */
+@media (min-width: 1200px) {
+  .news-section .container {
+    max-width: 1200px;
+  }
+
+  .news-title {
+    font-size: 22px;
+  }
+}
+
+/* Fix for any container issues */
+* {
+  box-sizing: border-box;
+}
