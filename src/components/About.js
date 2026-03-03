@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import 'animate.css';
 
-export default function About() {
+export default function About({data}) {
     useEffect(() => {
         const initWOW = async () => {
             if (typeof window !== 'undefined') {
@@ -24,7 +24,7 @@ export default function About() {
             <div className="container mx-auto px-4">
                 {/* Main 2‑column grid: image (4) + content (8) */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
+                    {JSON.stringify(data)}
                     {/* LEFT COLUMN – IMAGE with "ABOUT COMPANY" label */}
                     <div className="lg:col-span-4">
                         <div className="about-image-items-style-1 space-y-6">
