@@ -1,15 +1,18 @@
 import About from "@/components/About";
-import Hero from "@/components/Hero";
-import Brand from "@/components/Brand";
 import HeroCommon from "@/components/HeroCommon";
+import {getPageWidgets} from "@/services/getPageData";
 
-export default function AboutPage() {
+export default async function AboutPage() {
+    const getWidget = await getPageWidgets('about');
+    const aboutData = {
+        widgets: getWidget
+    }
     return (
         <>
             <div id="smooth-wrapper">
                 <div id="smooth-content">
                     <HeroCommon />
-                   <About/>
+                    <About data={aboutData} />
                 </div>
             </div>
         </>
