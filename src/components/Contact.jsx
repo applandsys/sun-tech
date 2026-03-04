@@ -1,24 +1,64 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "react-toastify";
 
-export default function Contact() {
+export default function ContactForm() {
 
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         phone: "",
-        company: "",
+        subject: "",
         message: "",
     });
+
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
+
+        if (!formData.name || !formData.email || !formData.message) {
+            toast.error("Please fill required fields");
+            return;
+        }
+
+        setLoading(true);
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                toast.success("Message sent successfully 🚀");
+
+                setFormData({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    subject: "",
+                    message: "",
+                });
+            } else {
+                toast.error(data.message);
+            }
+
+        } catch (error) {
+            toast.error("Something went wrong");
+        }
+
+        setLoading(false);
     };
 
     return (

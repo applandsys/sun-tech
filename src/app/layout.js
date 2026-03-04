@@ -11,6 +11,7 @@ import MouseCursor from "@/components/MouseCursor";
 import Offcanvas from "@/components/Offcanvas";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import {ToastContainer} from "react-toastify";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <ToastContainer position="top-right" />
         </body>
         </html>
     );
