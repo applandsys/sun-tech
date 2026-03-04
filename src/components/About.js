@@ -181,7 +181,7 @@ export default function About({data}) {
 
                         <div className="video-section m-0 style-2 fix">
                             <div className="video-wrapper fix">
-                                <img dataSpeed=".8" src="assets/img/home-3/video-image.jpg" alt="img"/>
+                                <img dataspeed=".8" src="assets/img/home-3/video-image.jpg" alt="img"/>
                                 <div className="video">
                                     <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I"
                                        className="video-popup ripple video-btn">
@@ -446,7 +446,7 @@ export default function About({data}) {
 
                         <div className="video-section fix">
                             <div className="video-wrapper fix">
-                                <img data-speed=".8" src="assets/img/home-1/video-image.jpg" alt="img"/>
+                                <img dataspeed=".8" src="assets/img/home-1/video-image.jpg" alt="img"/>
                                 <div className="video">
                                     <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I"
                                        className="video-popup ripple video-btn">
