@@ -6,7 +6,7 @@ export default function Header() {
             <div className="mega-menu-wrapper">
                 <div className="header-main">
                     <div className="header-left">
-                        <a href="index.html" className="header-logo">
+                        <Link href="/" className="header-logo">
                             <img src="assets/img/logo/black-logo.png" alt="Logo"
                                  style={
                                             {
@@ -14,162 +14,29 @@ export default function Header() {
                                                 width:'100%',
                                                 height:'auto' + ''}
                                         }/>
-                        </a>
+                        </Link>
                         <div className="mean__menu-wrapper">
                             <div className="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li className="has-dropdown menu-thumb">
-                                            <a href="javascript:void(0)">
+                                        <li className="menu-thumb">
+                                            <Link href="/">
                                                 Home
-                                                <i className="fas fa-chevron-down"></i>
-                                            </a>
-                                            <ul className="submenu has-homemenu">
-                                                <li>
-                                                    <div className="homemenu-items">
-                                                        <div className="row row-cols-xl-4 row-cols-md-2 row-cols-2">
-                                                            <div className="col homemenu">
-                                                                <div className="homemenu-thumb">
-                                                                    <a href="index.html">
-                                                                        <img src="assets/img/header/home-1.jpg"
-                                                                             alt="img"/>
-                                                                    </a>
-                                                                </div>
-                                                                <div className="homemenu-content text-center">
-                                                                    <h4 className="homemenu-title">
-                                                                        <a href="index.html">
-                                                                            Home Solar 01
-                                                                        </a>
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col homemenu">
-                                                                <div className="homemenu-thumb mb-15">
-                                                                    <a href="index-2.html">
-                                                                        <img src="assets/img/header/home-2.jpg"
-                                                                             alt="img"/>
-                                                                    </a>
-                                                                </div>
-                                                                <div className="homemenu-content text-center">
-                                                                    <h4 className="homemenu-title">
-                                                                        <a href="index-2.html">
-                                                                            Home Solar 02
-                                                                        </a>
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col homemenu">
-                                                                <div className="homemenu-thumb mb-15">
-                                                                    <a href="index-3.html">
-                                                                        <img src="assets/img/header/home-3.jpg"
-                                                                             alt="img"/>
-                                                                    </a>
-                                                                </div>
-                                                                <div className="homemenu-content text-center">
-                                                                    <h4 className="homemenu-title">
-                                                                        <a href="index-3.html">
-                                                                            Environment
-                                                                        </a>
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col homemenu">
-                                                                <div className="homemenu-thumb mb-15">
-                                                                    <a href="index-4.html">
-                                                                        <img src="assets/img/header/home-4.jpg"
-                                                                             alt="img"/>
-                                                                    </a>
-                                                                </div>
-                                                                <div className="homemenu-content text-center">
-                                                                    <h4 className="homemenu-title">
-                                                                        <a href="index-4.html">
-                                                                            Hydro Energy
-                                                                        </a>
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col homemenu">
-                                                                <div className="homemenu-thumb mb-15">
-                                                                    <a href="index-5.html">
-                                                                        <img src="assets/img/header/home-5.jpg"
-                                                                             alt="img"/>
-                                                                    </a>
-                                                                </div>
-                                                                <div className="homemenu-content text-center">
-                                                                    <h4 className="homemenu-title">
-                                                                        <a href="index-5.html">
-                                                                            Hydro Power
-                                                                        </a>
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col homemenu">
-                                                                <div className="homemenu-thumb mb-15">
-                                                                    <a href="index-6.html">
-                                                                        <img src="assets/img/header/home-6.jpg"
-                                                                             alt="img"/>
-                                                                    </a>
-                                                                </div>
-                                                                <div className="homemenu-content text-center">
-                                                                    <h4 className="homemenu-title">
-                                                                        <a href="index-6.html">
-                                                                            Wind & Energy
-                                                                        </a>
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col homemenu">
-                                                                <div className="homemenu-thumb mb-15">
-                                                                    <a href="index-7.html">
-                                                                        <img src="assets/img/header/home-7.jpg"
-                                                                             alt="img"/>
-                                                                    </a>
-                                                                </div>
-                                                                <div className="homemenu-content text-center">
-                                                                    <h4 className="homemenu-title">
-                                                                        <a href="index-7.html">
-                                                                            Renewable & Energy
-                                                                        </a>
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col homemenu">
-                                                                <div className="homemenu-thumb mb-15">
-                                                                    <img src="assets/img/header/home-8.jpg" alt="img"/>
-                                                                </div>
-                                                                <div className="homemenu-content text-center">
-                                                                    <h4 className="homemenu-title">
-                                                                        Coming Soon
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            </Link>
                                         </li>
                                         <li className="has-dropdown active d-xl-none">
-                                            <a href="javascript:void(0)" className="border-none">
-                                                Home
-                                            </a>
-                                            <ul className="submenu">
-                                                <li><a href="index.html">Home Solar 01</a></li>
-                                                <li><a href="index-2.html">Home Solar 02</a></li>
-                                                <li><a href="index-3.html">Environment</a></li>
-                                                <li><a href="index-4.html">Hydro Energy</a></li>
-                                                <li><a href="index-5.html">Hydro Power</a></li>
-                                                <li><a href="index-6.html"> Wind & Energy</a></li>
-                                                <li><a href="index-7.html">Renewable & Energy</a></li>
-                                            </ul>
+                                            <Link href="/about" className="border-none">
+                                                About
+                                            </Link>
                                         </li>
                                         <li className="has-dropdown">
                                             <a href="javascript:void(0)">
-                                                Pages
+                                                About
                                                 <i className="fas fa-chevron-down"></i>
                                             </a>
                                             <ul className="submenu">
                                                 <li>
-                                                    <a href="about.html">About Us</a>
+                                                    <Link href="/about">About Us</Link>
                                                 </li>
                                                 <li className="has-dropdown">
                                                     <a href="javascript:void(0)">
@@ -177,25 +44,12 @@ export default function Header() {
                                                         <i className="fas fa-angle-right"></i>
                                                     </a>
                                                     <ul className="submenu">
-                                                        <li><a href="team.html">Our Team</a></li>
-                                                        <li><a href="team-details.html">Team Details</a></li>
+                                                        <li><a href="/">Our Team</a></li>
+                                                        <li><a href="/">Team Details</a></li>
                                                     </ul>
                                                 </li>
-                                                <li className="has-dropdown">
-                                                    <a href="javascript:void(0)">
-                                                        Shop Page
-                                                        <i className="fas fa-angle-right"></i>
-                                                    </a>
-                                                    <ul className="submenu">
-                                                        <li><a href="shop.html">Shop Page</a></li>
-                                                        <li><a href="shop-details.html">Shop Details</a></li>
-                                                        <li><a href="shop-cart.html">Shop Cart</a></li>
-                                                        <li><a href="checkout.html">CheckOut</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="pricing.html">Pricing Plan</a></li>
-                                                <li><a href="faq.html">Faqs</a></li>
-                                                <li><a href="404.html">404 Error</a></li>
+                                                <li><a href="/">Pricing Plan</a></li>
+                                                <li><a href="/">Faqs</a></li>
                                             </ul>
                                         </li>
                                         <li>
@@ -204,8 +58,8 @@ export default function Header() {
                                                 <i className="fas fa-chevron-down"></i>
                                             </a>
                                             <ul className="submenu">
-                                                <li><a href="service.html">Our Services</a></li>
-                                                <li><a href="service-details.html">Service Details</a></li>
+                                                <li><a href="/">Our Services</a></li>
+                                                <li><a href="/">Service Details</a></li>
                                             </ul>
                                         </li>
                                         <li>
@@ -214,8 +68,8 @@ export default function Header() {
                                                 <i className="fas fa-chevron-down"></i>
                                             </a>
                                             <ul className="submenu">
-                                                <li><a href="project.html">Our Project</a></li>
-                                                <li><a href="project-details.html">Project Details</a></li>
+                                                <li><a href="/">Our Project</a></li>
+                                                <li><a href="/">Project Details</a></li>
                                             </ul>
                                         </li>
                                         <li>
@@ -224,12 +78,12 @@ export default function Header() {
                                                 <i className="fas fa-chevron-down"></i>
                                             </a>
                                             <ul className="submenu">
-                                                <li><a href="news.html">Our News</a></li>
-                                                <li><a href="news-details.html">News Details</a></li>
+                                                <li><a href="/">Our News</a></li>
+                                                <li><a href="/">News Details</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="contact.html">
+                                            <a href="/contact">
                                                 Contact
                                             </a>
                                         </li>
