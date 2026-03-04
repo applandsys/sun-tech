@@ -1,4 +1,3 @@
-// components/Preloader.js
 'use client';
 
 import { useEffect, useState } from "react";
@@ -34,24 +33,44 @@ export default function Preloader() {
 
     return (
         <div id="preloader" className="preloader">
-            <div className="animation-preloader">
-                <div className="spinner"></div>
-                <div className="txt-loading">
-                    <span data-text-preloader="E" className="letters-loading">E</span>
-                    <span data-text-preloader="C" className="letters-loading">C</span>
-                    <span data-text-preloader="O" className="letters-loading">O</span>
-                    <span data-text-preloader="L" className="letters-loading">L</span>
-                    <span data-text-preloader="Y" className="letters-loading">Y</span>
+            <div id="preloader" className="preloader">
+                <div className="animation-preloader">
+                    <div className="spinner">
+                    </div>
+                    <div className="txt-loading">
+                    <span data-text-preloader="E" className="letters-loading">
+                        E
+                    </span>
+                        <span data-text-preloader="C" className="letters-loading">
+                        C
+                    </span>
+                        <span data-text-preloader="O" className="letters-loading">
+                        O
+                    </span>
+                        <span data-text-preloader="L" className="letters-loading">
+                        L
+                    </span>
+                        <span data-text-preloader="Y" className="letters-loading">
+                        Y
+                    </span>
+                    </div>
+                    <p className="text-center">Loading</p>
                 </div>
-                <p className="text-center">Loading</p>
-            </div>
-            <div className="loader">
-                <div className="row">
-                    {[...Array(4)].map((_, i) => (
-                        <div key={i} className={`col-3 loader-section ${i < 2 ? "section-left" : "section-right"}`}>
+                <div className="loader">
+                    <div className="row">
+                        <div className="col-3 loader-section section-left">
                             <div className="bg"></div>
                         </div>
-                    ))}
+                        <div className="col-3 loader-section section-left">
+                            <div className="bg"></div>
+                        </div>
+                        <div className="col-3 loader-section section-right">
+                            <div className="bg"></div>
+                        </div>
+                        <div className="col-3 loader-section section-right">
+                            <div className="bg"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,5 +1,4 @@
 import About from "@/components/About";
-import HeroCommon from "@/components/HeroCommon";
 import {getPageWidgets} from "@/services/getPageData";
 
 export default async function AboutPage() {
@@ -9,12 +8,7 @@ export default async function AboutPage() {
     }
     return (
         <>
-            <div id="smooth-wrapper">
-                <div id="smooth-content">
-                    <HeroCommon />
-                    <About data={aboutData} />
-                </div>
-            </div>
+            <About data={aboutData} />
         </>
     );
 }
