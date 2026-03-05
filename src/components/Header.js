@@ -24,64 +24,38 @@ export default function Header() {
                                                 Home
                                             </Link>
                                         </li>
-                                        <li className="has-dropdown active d-xl-none">
-                                            <Link href="/about" className="border-none">
+                                        <li className="menu-thumb">
+                                            <Link href="/about">
                                                 About
                                             </Link>
                                         </li>
-                                        <li className="has-dropdown">
-                                            <a href="javascript:void(0)">
-                                                About
-                                                <i className="fas fa-chevron-down"></i>
-                                            </a>
-                                            <ul className="submenu">
-                                                <li>
-                                                    <Link href="/about">About Us</Link>
-                                                </li>
-                                                <li className="has-dropdown">
-                                                    <a href="javascript:void(0)">
-                                                        Our Team
-                                                        <i className="fas fa-angle-right"></i>
-                                                    </a>
-                                                    <ul className="submenu">
-                                                        <li><a href="/">Our Team</a></li>
-                                                        <li><a href="/">Team Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="/">Pricing Plan</a></li>
-                                                <li><a href="/">Faqs</a></li>
-                                            </ul>
+                                        <li className="menu-thumb">
+                                            <Link href="/our-team">
+                                                Our Team
+                                            </Link>
                                         </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
+                                        <li className="menu-thumb">
+                                            <Link href="/service">
                                                 Services
-                                                <i className="fas fa-chevron-down"></i>
-                                            </a>
-                                            <ul className="submenu">
-                                                <li><a href="/">Our Services</a></li>
-                                                <li><a href="/">Service Details</a></li>
-                                            </ul>
+                                            </Link>
                                         </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                                                Projects
-                                                <i className="fas fa-chevron-down"></i>
-                                            </a>
-                                            <ul className="submenu">
-                                                <li><a href="/">Our Project</a></li>
-                                                <li><a href="/">Project Details</a></li>
-                                            </ul>
+                                        <li className="menu-thumb">
+                                            <Link href="/pricing">
+                                                Pricing
+                                            </Link>
                                         </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
+                                        <li className="menu-thumb">
+                                            <Link href="/news">
                                                 News
-                                                <i className="fas fa-chevron-down"></i>
-                                            </a>
-                                            <ul className="submenu">
-                                                <li><a href="/">Our News</a></li>
-                                                <li><a href="/">News Details</a></li>
-                                            </ul>
+                                            </Link>
                                         </li>
+                                        <li className="menu-thumb">
+                                            <Link href="/faq">
+                                                FAQ
+                                            </Link>
+                                        </li>
+
+
                                         <li>
                                             <a href="/contact">
                                                 Contact

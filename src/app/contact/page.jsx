@@ -1,14 +1,25 @@
-import {getPageWidgets} from "@/services/getPageData";
 import Contact from "@/components/Contact";
+import BreadCrumb from "@/components/BreadCrumb";
+
 
 export default async function ContactPage() {
-    const getWidget = await getPageWidgets('about');
-    const aboutData = {
-        widgets: getWidget
-    }
+
+    const breadCrumbData = [
+        {
+            name: "Home",
+            url: "/",
+        },
+        {
+            name: "Contact",
+            url: "/contact",
+        }
+    ];
+
+
     return (
         <>
-            <Contact data={aboutData} />
+            <BreadCrumb data={breadCrumbData} pageTitle="Contact" />
+            <Contact />
         </>
     );
 }
