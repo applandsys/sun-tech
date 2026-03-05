@@ -186,7 +186,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-bottom wow fadeInUp" data-wow-delay=".9s">
                     <div className="container">
-                        <p className="text-1">© 2025 Ecoly. All Rights Reserved</p>
+                        <p className="text-1">© 2026 SunTech. All Rights Reserved</p>
                     </div>
                 </div>
             </footer>
