@@ -143,10 +143,10 @@ export default function Footer() {
                             <div className="content">
                                 <h6>Contact us:</h6>
                                 <p>
-                                    <a href="tel:+483939993900">+483 9399 939 00</a>
+                                    <a href="tel:+483939993900">+880 1735 608147</a>
                                 </p>
                                 <p className="mt-2">
-                                    <a href="mailto:info@example.com">helloEcoly@gmail.com</a>
+                                    <a href="mailto:info@example.com">nfo@suntech.com</a>
                                 </p>
                             </div>
                         </div>

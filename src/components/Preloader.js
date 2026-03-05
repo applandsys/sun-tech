@@ -6,70 +6,61 @@ export default function Preloader() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Wait for the page to fully load
-        const handleLoad = () => {
-            setIsLoading(false);
-        };
+        const handleLoad = () => setIsLoading(false);
 
-        // Check if the page is already loaded
-        if (document.readyState === 'complete') {
+        // If page is already loaded
+        if (document.readyState === "complete") {
             setIsLoading(false);
         } else {
-            window.addEventListener('load', handleLoad);
+            window.addEventListener("load", handleLoad);
         }
 
-        // Fallback: hide after 3 seconds maximum
-        const timeout = setTimeout(() => {
-            setIsLoading(false);
-        }, 3000);
+        // Maximum 3 seconds fallback
+        const timeout = setTimeout(() => setIsLoading(false), 3000);
 
         return () => {
-            window.removeEventListener('load', handleLoad);
+            window.removeEventListener("load", handleLoad);
             clearTimeout(timeout);
         };
     }, []);
 
+    // Hide preloader when done
     if (!isLoading) return null;
 
     return (
         <div id="preloader" className="preloader">
-            <div id="preloader" className="preloader">
-                <div className="animation-preloader">
-                    <div className="spinner">
-                    </div>
-                    <div className="txt-loading">
-                    <span data-text-preloader="E" className="letters-loading">
-                        E
-                    </span>
-                        <span data-text-preloader="C" className="letters-loading">
-                        C
-                    </span>
-                        <span data-text-preloader="O" className="letters-loading">
-                        O
-                    </span>
-                        <span data-text-preloader="L" className="letters-loading">
-                        L
-                    </span>
-                        <span data-text-preloader="Y" className="letters-loading">
-                        Y
-                    </span>
-                    </div>
-                    <p className="text-center">Loading</p>
+            <div className="animation-preloader">
+                {/* Spinner */}
+                <div className="spinner" />
+
+                {/* SUNTECH Text Animation */}
+                <div className="txt-loading">
+                    <span data-text-preloader="S" className="letters-loading">S</span>
+                    <span data-text-preloader="U" className="letters-loading">U</span>
+                    <span data-text-preloader="N" className="letters-loading">N</span>
+                    <span data-text-preloader="T" className="letters-loading">T</span>
+                    <span data-text-preloader="E" className="letters-loading">E</span>
+                    <span data-text-preloader="C" className="letters-loading">C</span>
+                    <span data-text-preloader="H" className="letters-loading">H</span>
                 </div>
-                <div className="loader">
-                    <div className="row">
-                        <div className="col-3 loader-section section-left">
-                            <div className="bg"></div>
-                        </div>
-                        <div className="col-3 loader-section section-left">
-                            <div className="bg"></div>
-                        </div>
-                        <div className="col-3 loader-section section-right">
-                            <div className="bg"></div>
-                        </div>
-                        <div className="col-3 loader-section section-right">
-                            <div className="bg"></div>
-                        </div>
+
+                <p className="text-center">Loading</p>
+            </div>
+
+            {/* Bottom Bar Loader */}
+            <div className="loader">
+                <div className="row">
+                    <div className="col-3 loader-section section-left">
+                        <div className="bg" />
+                    </div>
+                    <div className="col-3 loader-section section-left">
+                        <div className="bg" />
+                    </div>
+                    <div className="col-3 loader-section section-right">
+                        <div className="bg" />
+                    </div>
+                    <div className="col-3 loader-section section-right">
+                        <div className="bg" />
                     </div>
                 </div>
             </div>
