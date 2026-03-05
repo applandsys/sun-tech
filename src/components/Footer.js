@@ -13,15 +13,15 @@ export default function Footer() {
                             <div className="col-xl-4 col-lg-6 col-md-7 wow fadeInUp" data-wow-delay=".2s">
                                 <div className="footer-widget-items">
                                     <div className="widget-head">
-                                        <a href="index.html">
-                                            <img src="assets/img/logo/white-logo.svg" alt="img"/>
+                                        <a href="/">
+                                            <img src="assets/img/logo/black-logo.png" alt="img" style={{width: '150px'}}/>
                                         </a>
                                     </div>
                                     <div className="footer-content">
                                         <h3 className="title">
                                             Harness the Sun Get Solar Power Today!
                                         </h3>
-                                        <a href="contact.html" className="theme-btn">
+                                        <a href="/contact" className="theme-btn">
                                             Contact Us Today
                                             <i className="fa-solid fa-arrow-up-right"></i>
                                         </a>

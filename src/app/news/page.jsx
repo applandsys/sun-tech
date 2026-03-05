@@ -2,7 +2,7 @@ import About from "@/components/About";
 import Hero from "@/components/Hero";
 //import {getPageWidgets} from "@/services/getPageData";
 
-export default async function AboutPage() {
+export default async function NewsPage() {
     // const getWidget = await getPageWidgets('about');
     // const aboutData = {
     //     widgets: getWidget
@@ -12,10 +12,8 @@ export default async function AboutPage() {
     return (
         <>
             <div className="mt-5" style={{marginTop: '100px' , paddingTop: '100px'}}>
-                <About data={aboutData} />
+                <h1>News Goes Here </h1>
             </div>
-            {/*<Hero />*/}
-
         </>
     );
 }
