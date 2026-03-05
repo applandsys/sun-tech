@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Hero from "@/components/Hero";
+import BreadCrumb from "@/components/BreadCrumb";
 //import {getPageWidgets} from "@/services/getPageData";
 
 export default async function AboutPage() {
@@ -9,11 +10,26 @@ export default async function AboutPage() {
     // }
     const aboutData = [];
 
+    const breadCrumbData = [
+        {
+            name: "Home",
+            url: "/",
+        },
+        {
+            name: "About Us",
+            url: "/about",
+        }
+    ];
+
     return (
         <>
-            <div className="mt-5" style={{marginTop: '100px' , paddingTop: '100px'}}>
+
+            <BreadCrumb data={breadCrumbData} pageTitle="About Us"/>
+            <div className="mt-4">
                 <About data={aboutData} />
             </div>
+
+
             {/*<Hero />*/}
 
         </>

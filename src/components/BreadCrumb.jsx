@@ -9,7 +9,6 @@ const BreadCrumb = ({ data, pageTitle }) => {
         >
             <div className="container">
                 <div className="page-heading">
-
                     <ul className="breadcrumb-list">
                         {data?.map((item, index) => (
                             <li key={index}>
@@ -17,9 +16,7 @@ const BreadCrumb = ({ data, pageTitle }) => {
                             </li>
                         ))}
                     </ul>
-
                     <h1 className="breadcrumb-title">{pageTitle}</h1>
-
                 </div>
             </div>
         </section>
