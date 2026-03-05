@@ -1,24 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-    --background: #ffffff;
-    --foreground: #171717;
+.team-arrow-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
+.swiper-button-next,
+.swiper-button-prev {
+    color: #262220; /* your arrow color */
+    font-size: 24px; /* optional size */
+    background: none; /* remove any background */
+    border-radius: 0; /* remove rounding */
+    width: auto;      /* default size */
+    height: auto;     /* default size */
 }
 
-body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-/* Remove all the project section styles from globals.css */
-/* They should only be in _project.scss */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: #262220;  /* arrow icon color */
+    font-size: 24px; /* size of the arrow */
+}
