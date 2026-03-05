@@ -8,6 +8,9 @@ import TeamSection from "@/components/TeamSection";
 import Offer from "@/components/Offer";
 import Project from "@/components/Project";
 import Testimonial from "@/components/Testimonial";
+import ContactForm from "@/components/Contact";
+import News from "@/components/News";
+import Cta from "@/components/Cta";
 
 export default function Home() {
     return (
@@ -24,9 +27,9 @@ export default function Home() {
                     <Offer />
                     <Project />
                     <Testimonial />
-                    {/*<Contact />*/}
-                    {/*<News />*/}
-                    {/*<Cta />*/}
+                    <ContactForm />
+                    <News />
+                    <Cta />
                 </div>
             </div>
         </>
