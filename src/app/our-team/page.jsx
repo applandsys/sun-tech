@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Hero from "@/components/Hero";
+import BreadCrumb from "@/components/BreadCrumb";
 //import {getPageWidgets} from "@/services/getPageData";
 
 export default async function OurTeamPage() {
@@ -9,23 +10,22 @@ export default async function OurTeamPage() {
     // }
     const aboutData = [];
 
+    const breadCrumbData = [
+        {
+            name: "Home",
+            url: "/",
+        },
+        {
+            name: "Our Team",
+            url: "/our-team",
+        }
+    ];
+
+
     return (
         <>
+            <BreadCrumb data={breadCrumbData} pageTitle="Our Team"/>
             <div className="mt-5" style={{marginTop: '100px', paddingTop: '100px'}}>
-                <section className="breadcrumb-wrapper bg-cover fix"
-                         style={{backgroundImage: "url(assets/img/inner/breadcrumb-image.jpg)" }}>
-                    <div className="container">
-                        <div className="page-heading">
-                            <ul className="breadcrumb-list">
-                                <li>Home</li>
-                                <li>//</li>
-                                <li>Our Team</li>
-                            </ul>
-                            <h1 className="breadcrumb-title">Our Team</h1>
-                        </div>
-                    </div>
-                </section>
-
                 <section className="team-section-inner section-padding fix">
                     <div className="row g-4">
                         <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp">
