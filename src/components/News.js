@@ -2,7 +2,7 @@
 
 export default function News() {
     return (
-        <section className="news-section section-padding fix">
+        <section className="news-section section-padding fix" style={{ marginBottom: '100px' }}>
             <div className="container">
                 <div className="section-title text-center">
                     <h6 className="sub-title wow fadeInUp"><img src="assets/img/sub-title-1.svg" alt="img"/>OUR BLOG &
