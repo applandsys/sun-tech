@@ -11,27 +11,26 @@ import Testimonial from "@/components/Testimonial";
 import ContactForm from "@/components/Contact";
 import News from "@/components/News";
 import Cta from "@/components/Cta";
+import Footer from "@/components/Footer";
+import FooterTwo from "@/components/FooterTwo";
 
 export default function Home() {
     return (
         <>
-            <div id="smooth-wrapper">
-                <div id="smooth-content">
-                    <Hero />
-                    <Brand />
-                    <About />
-                    <Services />
-                    <ChooseUs />
-                    <Video />
-                    <TeamSection />
-                    <Offer />
-                    <Project />
-                    <Testimonial />
-                    <ContactForm />
-                    <News />
-                    <Cta />
-                </div>
-            </div>
+            <Hero />
+            <Brand />
+            <About />
+            <Services />
+            <ChooseUs />
+            <Video />
+            <TeamSection />
+            <Offer />
+            <Project />
+            <Testimonial />
+            <ContactForm />
+            <News />
+            <Cta />
+
         </>
     );
 }

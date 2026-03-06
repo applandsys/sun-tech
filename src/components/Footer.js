@@ -1,10 +1,8 @@
-import Link from 'next/link';
-
 export default function Footer() {
     return (
         <>
             <footer
-                className="footer-section bg-cover"
+                className="footer-section bg-cover fixed-bottom"
                 style={{ backgroundImage: "url('/assets/img/home-1/footer-bg.jpg')" }}
             >
                 <div className="container">
@@ -190,7 +188,6 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
-
         </>
 
     );
