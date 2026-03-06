@@ -1,8 +1,5 @@
-// app/layout.js
-import { Geist, Geist_Mono } from "next/font/google";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./globals.css";
-
 import Preloader from "@/components/Preloader";
 import BackToTop from "@/components/BackToTop";
 import MouseCursor from "@/components/MouseCursor";
@@ -32,23 +29,22 @@ export default function RootLayout({ children }) {
             <link rel="stylesheet" href="/assets/css/main.css" />
         </head>
         <body suppressHydrationWarning={true}>
+        <ClientAnimations>
         <Preloader />
         <BackToTop />
         <MouseCursor />
         <Offcanvas />
         <Header />
-
-        {/* Smooth wrapper – contains only the main content */}
         <div id="smooth-wrapper">
             <div id="smooth-content">
                 <main>
-                    <ClientAnimations>{children}</ClientAnimations>
+                    {children}
+                   <Footer/>
                 </main>
             </div>
         </div>
-
-        <Footer />
         <ToastContainer position="top-right" />
+        </ClientAnimations>
         </body>
         </html>
     );

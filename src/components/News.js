@@ -25,7 +25,7 @@ export default function News() {
                                     </div>
                                     <span>LEARNING</span>
                                 </div>
-                                <h4><a href="news-details.html">Solar designing process from start implementation</a>
+                                <h4><a href="/">Solar designing process from start implementation</a>
                                 </h4>
                                 <p>Ways every day, so that all of us can be part of the changing energy system.</p>
                             </div>
@@ -46,7 +46,7 @@ export default function News() {
                                     </div>
                                     <span>LEARNING</span>
                                 </div>
-                                <h4><a href="news-details.html">Solar Design Journey: From Concept to Completion</a>
+                                <h4><a href="/">Solar Design Journey: From Concept to Completion</a>
                                 </h4>
                                 <p>Ways every day, so that all of us can be part of the changing energy system.</p>
                             </div>
@@ -67,7 +67,7 @@ export default function News() {
                                     </div>
                                     <span>LEARNING</span>
                                 </div>
-                                <h4><a href="news-details.html">Impact of Solar Energy on Reducing Carbon</a></h4>
+                                <h4><a href="/">Impact of Solar Energy on Reducing Carbon</a></h4>
                                 <p>Ways every day, so that all of us can be part of the changing energy system.</p>
                             </div>
                         </div>

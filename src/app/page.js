@@ -15,23 +15,20 @@ import Cta from "@/components/Cta";
 export default function Home() {
     return (
         <>
-            <div id="smooth-wrapper">
-                <div id="smooth-content">
-                    <Hero />
-                    <Brand />
-                    <About />
-                    <Services />
-                    <ChooseUs />
-                    <Video />
-                    <TeamSection />
-                    <Offer />
-                    <Project />
-                    <Testimonial />
-                    <ContactForm />
-                    <News />
-                    <Cta />
-                </div>
-            </div>
+            <Hero />
+            <Brand />
+            <About />
+            <Services />
+            <ChooseUs />
+            <Video />
+            <TeamSection />
+            <Offer />
+            <Project />
+            <Testimonial />
+            <ContactForm />
+            <News />
+            <Cta />
+
         </>
     );
 }

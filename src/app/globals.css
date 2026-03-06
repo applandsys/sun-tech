@@ -24,9 +24,6 @@ body {
 }
 
 /* Footer stays at bottom, never shrinks */
-footer {
-    flex-shrink: 0;
-}
 
 /* ===== YOUR EXISTING STYLES ===== */
 .team-arrow-btn {
