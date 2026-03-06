@@ -11,8 +11,6 @@ import Testimonial from "@/components/Testimonial";
 import ContactForm from "@/components/Contact";
 import News from "@/components/News";
 import Cta from "@/components/Cta";
-import Footer from "@/components/Footer";
-import FooterTwo from "@/components/FooterTwo";
 
 export default function Home() {
     return (

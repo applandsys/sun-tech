@@ -8,9 +8,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ToastContainer } from "react-toastify";
 import ClientAnimations from "@/components/ClientAnimations";
-import Cta from "@/components/Cta";
-import News from "@/components/News";
-import FooterTwo from "@/components/FooterTwo";
 
 export const metadata = {
     title: "Suntech Website",
